@@ -12,6 +12,21 @@ html {
   scroll-behavior: smooth;
 }
 
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+.animate-float-1 {
+  animation: float 4s ease-in-out infinite 0.5s;
+}
+.animate-float-2 {
+  animation: float 4s ease-in-out infinite 1s;
+}
+
 body {
   font-family: inherit;
   color: #111827;
