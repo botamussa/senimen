@@ -155,44 +155,159 @@ export default function Home() {
         </div>
 
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="max-w-2xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-5">
-              Экономьте на медицине —<br />
-              <span className="text-[#1D6AF3]">скачайте Senimen</span>
-            </h1>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-            <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-xl leading-relaxed">
-              Получайте скидки у лучших медицинских партнеров Казахстана за пару кликов. Бесплатно, без скрытых платежей.
-            </p>
-
-            <div className="flex flex-wrap gap-3 mb-10">
-              <AppStoreButton />
-              <GooglePlayButton />
+            {/* Left — text */}
+            <div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-5">
+                Экономьте на медицине —<br />
+                <span className="text-[#1D6AF3]">скачайте Senimen</span>
+              </h1>
+              <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-xl leading-relaxed">
+                Получайте скидки у лучших медицинских партнеров Казахстана за пару кликов. Бесплатно, без скрытых платежей.
+              </p>
+              <div className="flex flex-wrap gap-3 mb-10">
+                <AppStoreButton />
+                <GooglePlayButton />
+              </div>
+              <div className="flex flex-wrap gap-6 text-sm text-gray-500">
+                <div className="flex items-center gap-2">
+                  <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span>10 000+ скачиваний</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <svg className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <span>4.8 / 5 в App Store</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <svg className="w-4 h-4 text-[#1D6AF3]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  <span>10+ партнеров</span>
+                </div>
+              </div>
             </div>
 
-            <div className="flex flex-wrap gap-6 text-sm text-gray-500">
-              <div className="flex items-center gap-2">
-                <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span>10 000+ скачиваний</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <svg className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-                <span>4.8 / 5 в App Store</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <svg className="w-4 h-4 text-[#1D6AF3]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                <span>10+ партнеров</span>
+            {/* Right — phone mockup */}
+            <div className="hidden lg:flex justify-center items-center">
+              <div className="relative" style={{animation: "float 4s ease-in-out infinite"}}>
+
+                {/* Floating badge top-left */}
+                <div className="absolute -left-10 top-16 bg-white rounded-2xl shadow-lg px-4 py-3 flex items-center gap-2 z-10" style={{animation: "float 4s ease-in-out infinite 0.5s"}}>
+                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center text-base">💊</div>
+                  <div>
+                    <div className="text-xs text-gray-400">Аптека</div>
+                    <div className="text-sm font-bold text-green-600">−15%</div>
+                  </div>
+                </div>
+
+                {/* Floating badge bottom-right */}
+                <div className="absolute -right-8 bottom-24 bg-white rounded-2xl shadow-lg px-4 py-3 flex items-center gap-2 z-10" style={{animation: "float 4s ease-in-out infinite 1s"}}>
+                  <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-base">🔬</div>
+                  <div>
+                    <div className="text-xs text-gray-400">Анализы</div>
+                    <div className="text-sm font-bold text-[#1D6AF3]">−20%</div>
+                  </div>
+                </div>
+
+                {/* Phone frame */}
+                <div className="w-64 bg-gray-900 rounded-[3rem] p-2 shadow-2xl">
+                  <div className="bg-white rounded-[2.5rem] overflow-hidden">
+
+                    {/* Status bar */}
+                    <div className="bg-[#1D6AF3] px-5 pt-8 pb-4">
+                      <div className="flex items-center justify-between mb-3">
+                        <span className="text-white font-bold text-base">Senimen</span>
+                        <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
+                          <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                          </svg>
+                        </div>
+                      </div>
+                      <div className="bg-white/15 rounded-xl px-3 py-2 flex items-center gap-2">
+                        <svg className="w-3 h-3 text-white/70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                        <span className="text-white/70 text-xs">Поиск партнера...</span>
+                      </div>
+                    </div>
+
+                    {/* App body */}
+                    <div className="px-3 py-3 bg-gray-50 space-y-2">
+                      <p className="text-xs font-semibold text-gray-400 px-1">Популярные партнеры</p>
+
+                      {/* Card 1 */}
+                      <div className="bg-white rounded-2xl p-3 shadow-sm flex items-center gap-3">
+                        <div className="w-10 h-10 bg-red-50 rounded-xl flex items-center justify-center text-lg flex-shrink-0">🧪</div>
+                        <div className="flex-1 min-w-0">
+                          <div className="font-semibold text-gray-900 text-xs">Invivo</div>
+                          <div className="text-gray-400 text-[10px]">Лаборатория • Анализы</div>
+                        </div>
+                        <div className="bg-green-100 text-green-700 font-bold text-xs px-2 py-1 rounded-lg flex-shrink-0">−20%</div>
+                      </div>
+
+                      {/* Card 2 */}
+                      <div className="bg-white rounded-2xl p-3 shadow-sm flex items-center gap-3">
+                        <div className="w-10 h-10 bg-green-50 rounded-xl flex items-center justify-center text-lg flex-shrink-0">🌿</div>
+                        <div className="flex-1 min-w-0">
+                          <div className="font-semibold text-gray-900 text-xs">БиоСфера</div>
+                          <div className="text-gray-400 text-[10px]">Лаборатория • Диагностика</div>
+                        </div>
+                        <div className="bg-green-100 text-green-700 font-bold text-xs px-2 py-1 rounded-lg flex-shrink-0">−15%</div>
+                      </div>
+
+                      {/* Card 3 */}
+                      <div className="bg-white rounded-2xl p-3 shadow-sm flex items-center gap-3">
+                        <div className="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center text-lg flex-shrink-0">🏥</div>
+                        <div className="flex-1 min-w-0">
+                          <div className="font-semibold text-gray-900 text-xs">Медцентр</div>
+                          <div className="text-gray-400 text-[10px]">Клиника • Консультация</div>
+                        </div>
+                        <div className="bg-green-100 text-green-700 font-bold text-xs px-2 py-1 rounded-lg flex-shrink-0">−10%</div>
+                      </div>
+
+                      {/* QR hint */}
+                      <div className="bg-[#1D6AF3] rounded-2xl p-3 flex items-center gap-3">
+                        <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                          <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8H3a2 2 0 00-2 2v10a2 2 0 002 2h14a2 2 0 002-2v-3" />
+                          </svg>
+                        </div>
+                        <div>
+                          <div className="text-white font-semibold text-xs">Показать QR-код</div>
+                          <div className="text-blue-200 text-[10px]">Предъявите на кассе</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Bottom nav */}
+                    <div className="bg-white border-t border-gray-100 px-4 py-2 flex justify-around">
+                      {["🏠","🔍","❤️","👤"].map((icon, i) => (
+                        <div key={i} className={`flex flex-col items-center gap-0.5 ${i === 0 ? "text-[#1D6AF3]" : "text-gray-300"}`}>
+                          <span className="text-base">{icon}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                  </div>
+                </div>
               </div>
             </div>
+
           </div>
         </div>
       </section>
+
+      <style jsx global>{`
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-12px); }
+        }
+      `}</style>
 
       {/* How it works */}
       <section id="how-it-works" className="py-20 bg-white">
