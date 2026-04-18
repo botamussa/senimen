@@ -76,10 +76,21 @@ export default function PartnerForm() {
       return;
     }
     setSubmitting(true);
-    // Simulate submission — replace with real API call
-    await new Promise((r) => setTimeout(r, 1200));
-    setSubmitting(false);
-    setSubmitted(true);
+    try {
+      const res = await fetch("/api/apply", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Ошибка отправки");
+      setSubmitted(true);
+    } catch (err: unknown) {
+      const message = err instanceof Error ? err.message : "Ошибка отправки. Попробуйте ещё раз.";
+      setErrors({ name: message });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   if (submitted) {
