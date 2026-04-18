@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --blue: #1D6AF3;
+  --dark-blue: #0F4DBF;
+  --light-blue: #EFF6FF;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: inherit;
+  color: #111827;
+  background: #ffffff;
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-[#1D6AF3] text-white font-semibold px-6 py-3 rounded-xl hover:bg-[#1558D6] transition-all duration-200 shadow-md hover:shadow-lg active:scale-95;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 border-2 border-[#1D6AF3] text-[#1D6AF3] font-semibold px-6 py-3 rounded-xl hover:bg-[#EFF6FF] transition-all duration-200 active:scale-95;
+  }
+
+  .section-title {
+    @apply text-2xl md:text-3xl font-bold text-gray-900;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-200;
+  }
+}
