@@ -156,11 +156,6 @@ export default function Home() {
 
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 text-[#1D6AF3] text-sm font-medium px-3 py-1.5 rounded-full mb-6">
-              <span className="w-2 h-2 bg-[#1D6AF3] rounded-full animate-pulse" />
-              Часть экосистемы Medina
-            </div>
-
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-5">
               Экономьте на медицине —<br />
               <span className="text-[#1D6AF3]">скачайте Senimen</span>
