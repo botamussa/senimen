@@ -1,8 +1,8 @@
 import Link from "next/link";
 import FAQ from "./components/FAQ";
 
-const APP_STORE_URL = "#"; // Replace with real App Store link
-const GOOGLE_PLAY_URL = "#"; // Replace with real Google Play link
+const APP_STORE_URL = "https://apps.apple.com/kz/app/senimen/id6758087411";
+const GOOGLE_PLAY_URL = "https://play.google.com/store/apps/details?id=com.senimen.partnerdiscount";
 
 function AppStoreButton() {
   return (
