@@ -142,29 +142,29 @@ export default function Home() {
             </div>
 
             {/* Right — phone mockup */}
-            <div className="hidden lg:flex justify-center items-center">
+            <div className="flex justify-center items-center mt-4 lg:mt-0">
               <div className="relative animate-float">
 
                 {/* Floating badge top-left */}
-                <div className="absolute -left-10 top-16 bg-white rounded-2xl shadow-lg px-4 py-3 flex items-center gap-2 z-10 animate-float-1">
-                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center text-base">💊</div>
+                <div className="absolute -left-8 sm:-left-10 top-14 sm:top-16 bg-white rounded-2xl shadow-lg px-3 sm:px-4 py-2 sm:py-3 flex items-center gap-2 z-10 animate-float-1">
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 bg-green-100 rounded-full flex items-center justify-center text-sm sm:text-base">💊</div>
                   <div>
                     <div className="text-xs text-gray-400">Аптека</div>
-                    <div className="text-sm font-bold text-green-600">−15%</div>
+                    <div className="text-xs sm:text-sm font-bold text-green-600">−15%</div>
                   </div>
                 </div>
 
                 {/* Floating badge bottom-right */}
-                <div className="absolute -right-8 bottom-24 bg-white rounded-2xl shadow-lg px-4 py-3 flex items-center gap-2 z-10 animate-float-2">
-                  <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-base">🔬</div>
+                <div className="absolute -right-6 sm:-right-8 bottom-20 sm:bottom-24 bg-white rounded-2xl shadow-lg px-3 sm:px-4 py-2 sm:py-3 flex items-center gap-2 z-10 animate-float-2">
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 bg-blue-100 rounded-full flex items-center justify-center text-sm sm:text-base">🔬</div>
                   <div>
                     <div className="text-xs text-gray-400">Анализы</div>
-                    <div className="text-sm font-bold text-[#1D6AF3]">−20%</div>
+                    <div className="text-xs sm:text-sm font-bold text-[#1D6AF3]">−20%</div>
                   </div>
                 </div>
 
                 {/* Phone frame */}
-                <div className="w-64 bg-gray-900 rounded-[3rem] p-2 shadow-2xl">
+                <div className="w-52 sm:w-60 lg:w-64 bg-gray-900 rounded-[3rem] p-2 shadow-2xl">
                   <div className="bg-white rounded-[2.5rem] overflow-hidden">
 
                     {/* Status bar */}
