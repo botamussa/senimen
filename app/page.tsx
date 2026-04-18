@@ -164,7 +164,7 @@ export default function Home() {
                 </div>
 
                 {/* Phone frame */}
-                <div className="w-52 sm:w-60 lg:w-64 bg-gray-900 rounded-[3rem] p-2 shadow-2xl">
+                <div className="w-64 sm:w-60 lg:w-64 bg-gray-900 rounded-[3rem] p-2 shadow-2xl">
                   <div className="bg-white rounded-[2.5rem] overflow-hidden">
 
                     {/* Status bar */}
@@ -210,7 +210,7 @@ export default function Home() {
                       </div>
 
                       {/* Card 3 */}
-                      <div className="bg-white rounded-2xl p-3 shadow-sm flex items-center gap-3">
+                      <div className="hidden sm:flex bg-white rounded-2xl p-3 shadow-sm items-center gap-3">
                         <div className="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center text-lg flex-shrink-0">🏥</div>
                         <div className="flex-1 min-w-0">
                           <div className="font-semibold text-gray-900 text-xs">Медцентр</div>
