@@ -1,6 +1,7 @@
 import Link from "next/link";
 import FAQ from "../components/FAQ";
 import PartnerForm from "../components/PartnerForm";
+import MobileMenu from "../components/MobileMenu";
 
 const WHATSAPP_URL = "https://wa.me/77785680808?text=Здравствуйте!%20Хочу%20узнать%20подробнее%20о%20партнёрстве%20с%20Senimen";
 
@@ -61,12 +62,12 @@ export default function PartnersPage() {
     <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-100">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-          <a href="/partners" className="flex items-center gap-2">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-between">
+          <a href="/partners" className="flex items-center gap-2 flex-shrink-0">
             <div className="w-8 h-8 bg-[#1D6AF3] rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm">S</span>
             </div>
-            <span className="font-bold text-xl text-gray-900">Senimen</span>
+            <span className="font-bold text-lg sm:text-xl text-gray-900">Senimen</span>
             <span className="hidden sm:block text-xs text-gray-400 ml-1 font-medium bg-gray-100 px-2 py-0.5 rounded-full">
               для партнеров
             </span>
@@ -89,18 +90,27 @@ export default function PartnersPage() {
 
           <Link
             href="/"
-            className="inline-flex items-center gap-1.5 border border-gray-200 text-gray-600 text-sm font-medium px-4 py-2 rounded-lg hover:bg-gray-50 transition-all duration-200"
+            className="hidden sm:inline-flex items-center gap-1.5 border border-gray-200 text-gray-600 text-sm font-medium px-4 py-2 rounded-lg hover:bg-gray-50 transition-all duration-200 flex-shrink-0"
           >
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg width="14" height="14" className="flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
             На главную
           </Link>
+          <MobileMenu
+            links={[
+              { href: "#benefits", label: "Выгоды" },
+              { href: "#how-it-works", label: "Как работает" },
+              { href: "#faq", label: "FAQ" },
+              { href: "/", label: "← На главную" },
+            ]}
+            variant="b2b"
+          />
         </div>
       </header>
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-[#0F2A6B] to-[#0F4DBF] pt-16 pb-24 md:pt-24 md:pb-32">
+      <section className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-[#0F2A6B] to-[#0F4DBF] pt-10 pb-16 sm:pt-16 sm:pb-24 md:pt-24 md:pb-32">
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500 opacity-10 rounded-full translate-x-1/3 -translate-y-1/3" />
           <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#1D6AF3] opacity-10 rounded-full -translate-x-1/3 translate-y-1/3" />
@@ -108,34 +118,34 @@ export default function PartnersPage() {
 
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-blue-200 text-sm font-medium px-3 py-1.5 rounded-full mb-6">
+            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-blue-200 text-sm font-medium px-3 py-1.5 rounded-full mb-5 sm:mb-6">
               <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
               Партнерская программа открыта
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-5">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4 sm:mb-5">
               Источник новых пациентов{" "}
               <span className="text-blue-300">без затрат на рекламу</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-blue-100 mb-8 max-w-xl leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-blue-100 mb-6 sm:mb-8 max-w-xl leading-relaxed">
               500–1000 целевых обращений в день через колл-центр Medina и мобильное приложение. Платите только за реальных клиентов.
             </p>
 
-            <div className="flex flex-wrap gap-4 mb-10">
+            <div className="flex flex-wrap gap-3 sm:gap-4 mb-7 sm:mb-10">
               <a
                 href="#apply"
-                className="inline-flex items-center gap-2 bg-white text-[#1D6AF3] font-bold px-8 py-4 rounded-xl hover:bg-blue-50 transition-all duration-200 shadow-lg hover:shadow-xl active:scale-95 text-lg"
+                className="inline-flex items-center gap-2 bg-white text-[#1D6AF3] font-bold px-6 sm:px-8 py-3 sm:py-4 rounded-xl hover:bg-blue-50 transition-all duration-200 shadow-lg hover:shadow-xl active:scale-95 text-base sm:text-lg"
               >
                 Стать партнером
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg width="18" height="18" className="flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </a>
               <WhatsAppButton />
             </div>
 
-            <div className="flex flex-wrap gap-6 text-sm text-blue-200">
+            <div className="flex flex-wrap gap-4 sm:gap-6 text-sm text-blue-200">
               <div className="flex items-center gap-2">
                 <svg className="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
@@ -160,10 +170,10 @@ export default function PartnersPage() {
       </section>
 
       {/* Medina Ecosystem */}
-      <section className="py-20 bg-white">
+      <section className="py-14 sm:py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-3xl p-8 md:p-12 border border-blue-100">
-            <div className="grid md:grid-cols-2 gap-10 items-center">
+          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-3xl p-6 sm:p-8 md:p-12 border border-blue-100">
+            <div className="grid md:grid-cols-2 gap-8 md:gap-10 items-center">
               <div>
                 <div className="inline-flex items-center gap-2 bg-[#1D6AF3]/10 text-[#1D6AF3] text-sm font-semibold px-3 py-1.5 rounded-full mb-4">
                   Экосистема Medina
@@ -203,7 +213,7 @@ export default function PartnersPage() {
       </section>
 
       {/* Benefits by org type */}
-      <section id="benefits" className="py-20 bg-gray-50">
+      <section id="benefits" className="py-14 sm:py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
@@ -260,7 +270,7 @@ export default function PartnersPage() {
       </section>
 
       {/* How partnership works */}
-      <section id="how-it-works" className="py-20 bg-white">
+      <section id="how-it-works" className="py-14 sm:py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
@@ -306,7 +316,7 @@ export default function PartnersPage() {
       </section>
 
       {/* Partners / Trust */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-14 sm:py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-3">Нам доверяют</h2>
@@ -361,7 +371,7 @@ export default function PartnersPage() {
       </section>
 
       {/* FAQ */}
-      <section id="faq" className="py-20 bg-white">
+      <section id="faq" className="py-14 sm:py-20 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
@@ -374,18 +384,18 @@ export default function PartnersPage() {
       </section>
 
       {/* Application Form */}
-      <section id="apply" className="py-20 bg-gradient-to-br from-[#EFF6FF] to-[#F0FDF4]">
+      <section id="apply" className="py-14 sm:py-20 bg-gradient-to-br from-[#EFF6FF] to-[#F0FDF4]">
         <div className="max-w-2xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+          <div className="text-center mb-8 sm:mb-10">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3">
               Оставьте заявку
             </h2>
-            <p className="text-gray-500 text-lg">
+            <p className="text-gray-500 text-base sm:text-lg">
               Менеджер свяжется с вами в течение рабочего дня
             </p>
           </div>
 
-          <div className="bg-white rounded-3xl shadow-xl border border-gray-100 p-8">
+          <div className="bg-white rounded-3xl shadow-xl border border-gray-100 p-5 sm:p-8">
             <PartnerForm />
           </div>
 
@@ -399,9 +409,9 @@ export default function PartnersPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 bg-gray-900">
+      <section className="py-12 sm:py-16 bg-gray-900">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-3xl font-bold text-white mb-3">
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
             Присоединяйтесь к Senimen
           </h2>
           <p className="text-gray-400 mb-6 max-w-xl mx-auto">
