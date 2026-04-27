@@ -403,7 +403,7 @@ export default function PartnersPage() {
             Присоединяйтесь к Senimen
           </h2>
           <p className="text-gray-400 mb-6 max-w-xl mx-auto">
-            Сотни медицинских организаций уже получают новых пациентов через экосистему Medina и приложение Senimen.
+            Сотни медицинских организаций уже получают новых пациентов через приложение Senimen.
           </p>
           <a
             href="#apply"
