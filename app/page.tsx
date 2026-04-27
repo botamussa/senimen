@@ -255,55 +255,92 @@ export default function Home() {
       {/* How it works */}
       <section id="how-it-works" className="py-14 sm:py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-12">
+          <div className="text-center mb-10 sm:mb-14">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">3 простых шага</h2>
             <p className="text-gray-500 text-lg">Начните экономить уже сегодня</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                step: "01",
-                icon: (
-                  <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                  </svg>
-                ),
-                title: "Выберите партнера",
-                desc: "Откройте Senimen, найдите нужную клинику, лабораторию или аптеку в вашем городе.",
-              },
-              {
-                step: "02",
-                icon: (
-                  <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8H3a2 2 0 00-2 2v10a2 2 0 002 2h14a2 2 0 002-2v-3" />
-                  </svg>
-                ),
-                title: "Покажите QR-код",
-                desc: "Предъявите QR или штрих-код на кассе — никаких бумаг, карточек и долгих проверок.",
-              },
-              {
-                step: "03",
-                icon: (
-                  <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                ),
-                title: "Получите скидку",
-                desc: "Оплатите услугу со скидкой прямо на месте. Экономия — мгновенно, без лишних шагов.",
-              },
-            ].map((item) => (
-              <div key={item.step} className="relative bg-white border border-gray-100 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow group">
-                <div className="absolute top-6 right-6 text-5xl font-black text-gray-50 group-hover:text-blue-50 transition-colors select-none">
-                  {item.step}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+
+            {/* Step 1 */}
+            <div className="relative bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
+              {/* Illustration */}
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-100 h-44 sm:h-48 flex items-center justify-center relative overflow-hidden">
+                <div className="absolute top-3 right-4 text-6xl font-black text-blue-200/60 select-none">01</div>
+                {/* Phone with search */}
+                <div className="w-24 h-36 bg-white rounded-2xl shadow-lg flex flex-col overflow-hidden border border-gray-100">
+                  <div className="bg-[#1D6AF3] px-2 py-2 flex items-center gap-1">
+                    <div className="w-2 h-2 bg-white/30 rounded-full" />
+                    <div className="flex-1 bg-white/20 rounded h-1.5" />
+                  </div>
+                  <div className="flex-1 p-1.5 space-y-1.5 bg-gray-50">
+                    {["🧪 Invivo −20%", "🌿 БиоСфера −15%", "💊 Аптека −10%"].map((t, i) => (
+                      <div key={i} className={`bg-white rounded-lg px-1.5 py-1 text-[7px] font-medium text-gray-700 flex items-center gap-1 ${i === 0 ? "ring-1 ring-[#1D6AF3]" : ""}`}>
+                        {t}
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                <div className="w-14 h-14 bg-blue-50 text-[#1D6AF3] rounded-xl flex items-center justify-center mb-5">
-                  {item.icon}
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
+                {/* Finger tap */}
+                <div className="absolute bottom-4 right-8 text-2xl">👆</div>
               </div>
-            ))}
+              <div className="p-6">
+                <div className="w-8 h-8 bg-[#1D6AF3] text-white rounded-full flex items-center justify-center text-sm font-bold mb-3">1</div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Выберите партнера</h3>
+                <p className="text-gray-500 text-sm leading-relaxed">Откройте Senimen, найдите нужную клинику, лабораторию или аптеку в вашем городе.</p>
+              </div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="relative bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
+              <div className="bg-gradient-to-br from-green-50 to-emerald-100 h-44 sm:h-48 flex items-center justify-center relative overflow-hidden">
+                <div className="absolute top-3 right-4 text-6xl font-black text-green-200/60 select-none">02</div>
+                {/* QR code visual */}
+                <div className="bg-white rounded-2xl p-4 shadow-lg flex flex-col items-center gap-2">
+                  <div className="grid grid-cols-5 gap-0.5">
+                    {[1,1,1,0,1, 1,0,1,0,1, 1,1,1,0,0, 0,0,0,1,1, 1,0,1,1,1].map((v, i) => (
+                      <div key={i} className={`w-3 h-3 rounded-sm ${v ? "bg-gray-900" : "bg-white"}`} />
+                    ))}
+                  </div>
+                  <div className="text-[10px] text-gray-400 font-medium">QR-код скидки</div>
+                </div>
+                <div className="absolute bottom-4 left-8 bg-white rounded-xl px-2 py-1 shadow text-xs font-bold text-green-600 flex items-center gap-1">
+                  <span>✓</span> Сканируется
+                </div>
+              </div>
+              <div className="p-6">
+                <div className="w-8 h-8 bg-[#1D6AF3] text-white rounded-full flex items-center justify-center text-sm font-bold mb-3">2</div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Покажите QR-код</h3>
+                <p className="text-gray-500 text-sm leading-relaxed">Предъявите QR или штрих-код на кассе — никаких бумаг, карточек и долгих проверок.</p>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="relative bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
+              <div className="bg-gradient-to-br from-yellow-50 to-orange-100 h-44 sm:h-48 flex items-center justify-center relative overflow-hidden">
+                <div className="absolute top-3 right-4 text-6xl font-black text-orange-200/60 select-none">03</div>
+                {/* Receipt / savings visual */}
+                <div className="bg-white rounded-2xl px-5 py-4 shadow-lg flex flex-col gap-2 min-w-[120px]">
+                  <div className="text-xs text-gray-400 font-medium">Чек об оплате</div>
+                  <div className="flex justify-between text-xs text-gray-500">
+                    <span>Услуга</span><span>5 000 ₸</span>
+                  </div>
+                  <div className="flex justify-between text-xs text-green-600 font-semibold">
+                    <span>Скидка</span><span>−1 000 ₸</span>
+                  </div>
+                  <div className="border-t border-dashed border-gray-200 pt-1 flex justify-between text-sm font-bold text-gray-900">
+                    <span>Итого</span><span>4 000 ₸</span>
+                  </div>
+                </div>
+                <div className="absolute bottom-4 right-8 text-2xl">🎉</div>
+              </div>
+              <div className="p-6">
+                <div className="w-8 h-8 bg-[#1D6AF3] text-white rounded-full flex items-center justify-center text-sm font-bold mb-3">3</div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Получите скидку</h3>
+                <p className="text-gray-500 text-sm leading-relaxed">Оплатите услугу со скидкой прямо на месте. Экономия — мгновенно, без лишних шагов.</p>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -386,25 +423,11 @@ export default function Home() {
             <p className="text-gray-500 text-lg">Ведущие медицинские организации Казахстана</p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-            {[
-              { name: "Invivo", category: "Лаборатория", color: "bg-red-50 text-red-600 border-red-100" },
-              { name: "БиоСфера", category: "Лаборатория", color: "bg-green-50 text-green-700 border-green-100" },
-              { name: "Ваш логотип", category: "Партнер", color: "bg-gray-50 text-gray-400 border-gray-100", placeholder: true },
-              { name: "Ваш логотип", category: "Партнер", color: "bg-gray-50 text-gray-400 border-gray-100", placeholder: true },
-            ].map((partner, i) => (
-              <div
-                key={i}
-                className={`rounded-2xl border p-6 flex flex-col items-center justify-center gap-2 min-h-[120px] ${partner.color} ${
-                  partner.placeholder ? "border-dashed" : ""
-                }`}
-              >
-                <div className={`text-lg font-bold ${partner.placeholder ? "text-gray-300" : ""}`}>
-                  {partner.name}
-                </div>
-                <div className="text-xs opacity-70">{partner.category}</div>
-              </div>
-            ))}
+          <div className="flex justify-center mb-10">
+            <div className="bg-red-50 border border-red-100 rounded-2xl px-10 py-8 flex flex-col items-center justify-center gap-2 min-h-[120px] min-w-[180px]">
+              <div className="text-2xl font-bold text-red-600">Invivo</div>
+              <div className="text-xs text-red-400 font-medium">Лаборатория • По всему Казахстану</div>
+            </div>
           </div>
 
           <div className="text-center">

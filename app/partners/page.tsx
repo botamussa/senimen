@@ -323,23 +323,11 @@ export default function PartnersPage() {
             <p className="text-gray-500">Уже в сети Senimen</p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-            {[
-              { name: "Invivo", category: "Лаборатория", color: "bg-red-50 border-red-100 text-red-600" },
-              { name: "БиоСфера", category: "Лаборатория", color: "bg-green-50 border-green-100 text-green-700" },
-              { name: "Ваш логотип", category: "Партнер", color: "bg-gray-50 border-gray-100 text-gray-300", placeholder: true },
-              { name: "Ваш логотип", category: "Партнер", color: "bg-gray-50 border-gray-100 text-gray-300", placeholder: true },
-            ].map((partner, i) => (
-              <div
-                key={i}
-                className={`rounded-2xl border p-6 flex flex-col items-center justify-center gap-2 min-h-[120px] ${partner.color} ${
-                  partner.placeholder ? "border-dashed" : ""
-                }`}
-              >
-                <div className="text-lg font-bold">{partner.name}</div>
-                <div className="text-xs opacity-70">{partner.category}</div>
-              </div>
-            ))}
+          <div className="flex justify-center mb-12">
+            <div className="bg-red-50 border border-red-100 rounded-2xl px-10 py-8 flex flex-col items-center justify-center gap-2 min-h-[120px] min-w-[180px]">
+              <div className="text-2xl font-bold text-red-600">Invivo</div>
+              <div className="text-xs text-red-400 font-medium">Лаборатория • По всему Казахстану</div>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
