@@ -6,11 +6,12 @@ declare global {
   }
 }
 
-function trackEvent(action: string, label: string) {
+function trackEvent(action: string, label: string, extraParams?: Record<string, string>) {
   if (typeof window !== "undefined" && window.gtag) {
     window.gtag("event", action, {
       event_category: "engagement",
       event_label: label,
+      ...extraParams,
     });
   }
 }
@@ -29,7 +30,7 @@ export function AppStoreButtonTracked() {
       href={APP_STORE_URL}
       target="_blank"
       rel="noopener noreferrer"
-      onClick={() => trackEvent("app_download_click", "App Store")}
+      onClick={() => trackEvent("app_download_click", "App Store", { platform: "App Store" })}
       className="inline-flex items-center gap-3 bg-black text-white px-5 py-3 rounded-xl hover:bg-gray-800 transition-all duration-200 shadow-md hover:shadow-lg active:scale-95"
     >
       <svg className="w-7 h-7 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
@@ -49,7 +50,7 @@ export function GooglePlayButtonTracked() {
       href={GOOGLE_PLAY_URL}
       target="_blank"
       rel="noopener noreferrer"
-      onClick={() => trackEvent("app_download_click", "Google Play")}
+      onClick={() => trackEvent("app_download_click", "Google Play", { platform: "Google Play" })}
       className="inline-flex items-center gap-3 bg-black text-white px-5 py-3 rounded-xl hover:bg-gray-800 transition-all duration-200 shadow-md hover:shadow-lg active:scale-95"
     >
       <svg className="w-7 h-7 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
