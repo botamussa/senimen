@@ -1,0 +1,20 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://origin.senimen.kz/api/:path*"
+    },
+    {
+      "source": "/app-staging/:path*",
+      "destination": "https://origin.senimen.kz/app-staging/:path*"
+    },
+    {
+      "source": "/admin/:path*",
+      "destination": "https://origin.senimen.kz/admin/:path*"
+    },
+    {
+      "source": "/.well-known/:path*",
+      "destination": "https://origin.senimen.kz/.well-known/:path*"
+    }
+  ]
+}
