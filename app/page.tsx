@@ -551,7 +551,6 @@ export default function Home() {
               <span className="text-white font-bold text-xs">S</span>
             </div>
             <span className="text-white font-semibold">Senimen</span>
-            <span className="text-gray-600 text-sm ml-2">Часть экосистемы Medina</span>
           </div>
           <div className="flex gap-6 text-sm">
             <Link href="/partners" className="hover:text-white transition-colors">
