@@ -2,6 +2,15 @@
 
 import { useState } from "react";
 
+function trackEvent(action: string, params?: Record<string, string>) {
+  if (typeof window !== "undefined" && (window as Window & { gtag?: (...args: unknown[]) => void }).gtag) {
+    (window as Window & { gtag?: (...args: unknown[]) => void }).gtag!("event", action, {
+      event_category: "engagement",
+      ...params,
+    });
+  }
+}
+
 interface FAQItem {
   question: string;
   answer: string;
@@ -23,7 +32,11 @@ export default function FAQ({ items }: FAQProps) {
         >
           <button
             className="w-full flex items-center justify-between px-5 py-4 text-left bg-white hover:bg-gray-50 transition-colors duration-150"
-            onClick={() => setOpenIndex(openIndex === index ? null : index)}
+            onClick={() => {
+                const isOpening = openIndex !== index;
+                setOpenIndex(isOpening ? index : null);
+                if (isOpening) trackEvent("faq_open", { question: item.question });
+              }}
             aria-expanded={openIndex === index}
           >
             <span className="font-medium text-gray-900 pr-4">{item.question}</span>

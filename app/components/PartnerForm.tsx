@@ -2,6 +2,15 @@
 
 import { useState } from "react";
 
+function trackEvent(action: string, params?: Record<string, string>) {
+  if (typeof window !== "undefined" && (window as Window & { gtag?: (...args: unknown[]) => void }).gtag) {
+    (window as Window & { gtag?: (...args: unknown[]) => void }).gtag!("event", action, {
+      event_category: "engagement",
+      ...params,
+    });
+  }
+}
+
 const ORG_TYPES = [
   { value: "clinic", label: "Клиника" },
   { value: "laboratory", label: "Лаборатория" },
@@ -85,6 +94,7 @@ export default function PartnerForm() {
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Ошибка отправки");
       setSubmitted(true);
+      trackEvent("form_submit", { org_type: form.orgType });
     } catch (err: unknown) {
       const message = err instanceof Error ? err.message : "Ошибка отправки. Попробуйте ещё раз.";
       setErrors({ name: message });

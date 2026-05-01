@@ -2,6 +2,7 @@ import Link from "next/link";
 import FAQ from "../components/FAQ";
 import PartnerForm from "../components/PartnerForm";
 import MobileMenu from "../components/MobileMenu";
+import PartnerPageTracker from "../components/PartnerPageTracker";
 
 const WHATSAPP_URL = "https://wa.me/77785680808?text=Здравствуйте!%20Хочу%20узнать%20подробнее%20о%20партнёрстве%20с%20Senimen";
 
@@ -60,6 +61,7 @@ const faqItems = [
 export default function PartnersPage() {
   return (
     <div className="min-h-screen bg-white">
+      <PartnerPageTracker />
       {/* Header */}
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-between">
@@ -135,6 +137,7 @@ export default function PartnersPage() {
             <div className="flex flex-wrap gap-3 sm:gap-4 mb-7 sm:mb-10">
               <a
                 href="#apply"
+                onClick={() => typeof window !== "undefined" && window.gtag?.("event", "cta_click", { event_category: "engagement", location: "hero" })}
                 className="inline-flex items-center gap-2 bg-white text-[#1D6AF3] font-bold px-6 sm:px-8 py-3 sm:py-4 rounded-xl hover:bg-blue-50 transition-all duration-200 shadow-lg hover:shadow-xl active:scale-95 text-base sm:text-lg"
               >
                 Стать партнером
